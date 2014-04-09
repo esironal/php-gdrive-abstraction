@@ -14,27 +14,27 @@ Requirements:
 - PHP 5 - I tested it with 5.3.3
 
 How to install:
-1) Clone project<br>
-2) Edit `gd-f.php`<br>
-3) On lines 2 and 3, make sure the path to the Google Drive PHP API is correct.<br>
-4) On lines 5, 6 and 7, enter your credentials from Google's API console.<br>
-5) On line 8, enter a filename which is used to store Google's oAuth token bundle.
+- Clone project
+- Edit `gd-f.php`
+- On lines 2 and 3, make sure the path to the Google Drive PHP API is correct.
+- On lines 5, 6 and 7, enter your credentials from Google's API console.
+- On line 8, enter a filename which is used to store Google's oAuth token bundle.
 
 How to acquire an oAuth token bundle:
-1) Create an `gd_tokenstore` object, e.g. `$response = new gd_tokenstore;`
-2) An exception should be thrown containing the correct Google oAuth URL.
-3) Redirect to this URL and log in with Google.
-4) Google will redirect you to your callback page.
-5) On your callback page, call `$response = gd_auth::get_oauth_token($_GET['code'];`
-6) Save the returned token bundle: `gd_tokenstore::save_tokens_to_store($response);`
-7) This will save the access token & refresh token in the file you specified in step 5 of installation.
+- Create an `gd_tokenstore` object, e.g. `$response = new gd_tokenstore;`
+- An exception should be thrown containing the correct Google oAuth URL.
+- Redirect to this URL and log in with Google.
+- Google will redirect you to your callback page.
+- On your callback page, call `$response = gd_auth::get_oauth_token($_GET['code'];`
+- Save the returned token bundle: `gd_tokenstore::save_tokens_to_store($response);`
+- This will save the access token & refresh token in the file you specified in step 5 of installation.
 
 How to call methods:
-1) Create a `gd_tokenstore` object, e.g. `$response = new gd_tokenstore;`
-2) If an exception is thrown, acquire another token bundle.
-3) Otherwise, call your method!
-4) e.g. `$googleinfo = $response->about();`
-5) The client libary will handle refreshing tokens automatically, as long as your token bundle is in place.
+- Create a `gd_tokenstore` object, e.g. `$response = new gd_tokenstore;`
+- If an exception is thrown, acquire another token bundle.
+- Otherwise, call your method!
+- e.g. `$googleinfo = $response->about();`
+- The client libary will handle refreshing tokens automatically, as long as your token bundle is in place.
 
 Method references:
-See the wiki.
+- See the wiki.
