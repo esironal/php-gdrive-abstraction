@@ -14,10 +14,10 @@ Requirements:
 - PHP 5 - I tested it with 5.3.3
 
 How to install:
-1) Clone project
-2) Edit "gd-f.php" 
-3) On lines 2 and 3, make sure the path to the Google Drive PHP API is correct.
-4) On lines 5, 6 and 7, enter your credentials from Google's API console.
+1) Clone project<br>
+2) Edit `gd-f.php`<br>
+3) On lines 2 and 3, make sure the path to the Google Drive PHP API is correct.<br>
+4) On lines 5, 6 and 7, enter your credentials from Google's API console.<br>
 5) On line 8, enter a filename which is used to store Google's oAuth token bundle.
 
 How to acquire an oAuth token bundle:
