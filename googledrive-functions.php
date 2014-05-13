@@ -203,7 +203,7 @@ class gd_tokenstore {
 		$uf = $filename;
 		
 		$file = new Google_DriveFile();
-		$file->setTitle($filename);
+		$file->setTitle(basename($filename));
 		$file->setMimeType($filemime);
 
 		$parent = new Google_ParentReference();
