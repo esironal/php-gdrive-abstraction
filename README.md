@@ -15,10 +15,11 @@ Requirements:
 
 How to install:
 - Clone project
-- Edit `gd-f.php`
-- On lines 2 and 3, make sure the path to the Google Drive PHP API is correct.
-- On lines 5, 6 and 7, enter your credentials from Google's API console.
-- On line 8, enter a filename which is used to store Google's oAuth token bundle.
+- Edit `googledrive-functions.php`
+- On lines `5` and `6`, make sure the path to the Google Drive PHP API is correct.
+- On lines `10`, `11` and `12`, enter your credentials from Google's API console.
+- On line 15, enter a filename which is used to store Google's oAuth token bundle.
+- This file will need to exist: `touch filename`.
 
 How to acquire an oAuth token bundle:
 - Create an `gd_tokenstore` object, e.g. `$response = new gd_tokenstore;`
