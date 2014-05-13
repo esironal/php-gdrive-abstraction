@@ -7,6 +7,8 @@ Google Drive's PHP Client API library is not well documented. Not at all, in fac
 
 This library works in conjunction with the PHP client library and makes common tasks easier. It handles storing oAuth tokens and refreshing them if necessary and makes calls to some of the major methods easier.
 
+I built this library to make hosting files using Google Drive easier, i.e. to use Google Drive as a static file store for my website. Hence the flat file for the oAuth token store, and the auto-refreshing tokens.
+
 Not all methods are implemented, I'll get around to implementing everything in time.
 
 Requirements:
@@ -18,7 +20,7 @@ How to install:
 - Edit `googledrive-functions.php`
 - On lines `5` and `6`, make sure the path to the Google Drive PHP API is correct.
 - On lines `10`, `11` and `12`, enter your credentials from Google's API console.
-- On line 15, enter a filename which is used to store Google's oAuth token bundle.
+- On line `15`, enter a filename which is used to store Google's oAuth token bundle.
 - This file will need to exist: `touch filename`.
 
 How to acquire an oAuth token bundle:
